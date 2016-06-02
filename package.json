@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "lint": "eslint .",
+    "posttest": "npm run lint"
   },
   "dependencies": {
     "body-parser": "^1.9.0",
@@ -25,11 +27,15 @@
     "passport-oauth2": "^1.1.2",
     "passport-twitter": "^1.0.2",
     "serve-favicon": "^2.0.1",
-    "loopback-component-explorer": "^2.1.0"
+    "loopback-component-explorer": "^2.1.0",
+    "eslint": "^2.5.3"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/strongloop-community/loopback-example-passport.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-loopback": "^4.0.0"
+  }
 }
